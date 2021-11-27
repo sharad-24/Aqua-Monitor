@@ -3,9 +3,23 @@ import { withRouter } from "react-router-dom";
 
 import { Grid } from '@material-ui/core';
 
+import {firebase} from './firebase';
+import { getAuth, GoogleAuthProvider } from "@firebase/auth";
+
 import logo from '../assets/images/login_screen_logo.png';
 
-function Home() {
+const Home = ()=> {
+
+    const SignInWithFirebase = () => {
+        var google_provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(google_provider)
+        .then((re)=>{
+            console.log(re);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
 
     return (
         <div className="h-screen overflow-hidden">
@@ -18,11 +32,10 @@ function Home() {
                     <h className="mt-0 lg:mt-smm text-3xl ">Welcome! We help you in monitoring your water usage.</h>
                     </div>
                     <div className="flex justify-center">
-                    <button className="bg-brown text-white font-bold mt-10 lg:mt-custom pl-10 pr-10 pt-3 pb-3 rounded-lg">Log In</button>
+                    <button className="bg-brown text-white font-bold mt-10 lg:mt-custom pl-10 pr-10 pt-3 pb-3 rounded-lg" onClick={SignInWithFirebase}>Log In</button>
                     </div>
                 </Grid>
             </Grid>
-
         </div>
     );
 }
