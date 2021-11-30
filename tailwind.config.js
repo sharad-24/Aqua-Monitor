@@ -17,12 +17,14 @@ module.exports = {
             'green': '#5AB963',
             'darkBlue': '#0A0E1A',
             'brown': '#997659',
+            'grey': '#E5E5E5',
         }),
         textColor: theme => ({
             ...theme('colors'),
             'green': '#5AB963',
             'darkblue': '#263238',
             'grey': '#808080',
+            'lightBlue': '#008891',
 
         }),
         borderColor: theme => ({
