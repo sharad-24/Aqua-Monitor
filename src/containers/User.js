@@ -33,7 +33,7 @@ const User = () => {
                         <CardContent>
                             <div className="flex justify-between mt-5">
                                 <h className="text-3xl font-bold text-lightBlue pt-5">User Details</h>
-                                <img className="rounded-full" src="https://lh3.googleusercontent.com/a-/AOh14GjZs9bYptA9d9ttP7ZBMQ-HfmH_qmaHPvTc_nuvBQ=s96-c" alt="login" />
+                                <img className="rounded-full" src={loginPhoto} alt="login" />
                             </div>
                             <br /><br /><br />
                             <div>

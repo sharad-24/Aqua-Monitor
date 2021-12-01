@@ -15,11 +15,11 @@ const Home = () => {
         var google_provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(google_provider)
             .then((re) => {
-                localStorage.setItem('Email', JSON.stringify(re.user.email));
-                localStorage.setItem('PhoneNumber', JSON.stringify(re.user.phoneNumber));
-                localStorage.setItem('photoData', JSON.stringify(re.user.photoURL));
-                localStorage.setItem('nameData', JSON.stringify(re.user.displayName));
-                console.log(re);
+                localStorage.setItem('Email', (re.user.email));
+                localStorage.setItem('PhoneNumber', (re.user.phoneNumber));
+                localStorage.setItem('photoData', (re.user.photoURL));
+                localStorage.setItem('nameData', (re.user.displayName));
+                console.log(re.user.photoURL);
                 setLogin(true);
             })
             .catch((err) => {
