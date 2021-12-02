@@ -41,9 +41,9 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img1} alt="img1" />
                                         <div className="flex justify-center mt-5">
-                                            <Link to="/statics"><Button>
+                                            <Link to="/statics"><button className="bg-brown text-white font-bold rounded-lg p-3">
                                                 Water Statistics
-                                            </Button></Link>
+                                            </button></Link>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -52,9 +52,9 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img2} alt="img2" />
                                         <div className="flex justify-center mt-5">
-                                            <Button>
+                                            <button  className="bg-brown text-white font-bold rounded-lg p-3">
                                                 Tips
-                                            </Button>
+                                            </button>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -66,9 +66,9 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img3} alt="img1" />
                                         <div className="flex justify-center mt-5">
-                                            <Button>
+                                            <button  className="bg-brown text-white font-bold rounded-lg p-3">
                                                 Notifications
-                                            </Button>
+                                            </button>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -77,9 +77,9 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img4} alt="img1" />
                                         <div className="flex justify-center mt-5">
-                                            <Link to="/user"><Button>
+                                            <Link to="/user"><button  className="bg-brown text-white font-bold rounded-lg p-3">
                                                 User Detail
-                                            </Button></Link>
+                                            </button></Link>
                                         </div>
                                     </CardContent>
                                 </Card>
