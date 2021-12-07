@@ -25,6 +25,10 @@ module.exports = {
             'darkblue': '#263238',
             'grey': '#808080',
             'lightBlue': '#008891',
+            'tip1': "#008891",
+            'tip2': "#DCC42A",
+            'tip3': "#753422",
+            'tip4': "#3E7C17",
 
         }),
         borderColor: theme => ({

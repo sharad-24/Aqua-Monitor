@@ -5,6 +5,9 @@ import { Line } from 'react-chartjs-2';
 import {Chart, CategoryScale, LineController, LineElement, PointElement, LinearScale, Title} from 'chart.js'
 Chart.register(CategoryScale, LineController, LineElement, PointElement, LinearScale, Title);
 
+let forLineGraph = [];
+forLineGraph = localStorage.getItem('forTips'); 
+console.log("Line" , forLineGraph);
 
 const state = {
   labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
@@ -16,7 +19,7 @@ const state = {
       backgroundColor: '#2D60FF',
       borderColor: '#2D60FF',
       borderWidth: 2,
-      data: [5, 59, 40, 81, 56, 92, 28]
+      data: forLineGraph
     }
   ]
 }

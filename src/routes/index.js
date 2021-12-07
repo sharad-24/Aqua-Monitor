@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 
-import { Home, Choice, User, Statics } from '../containers';
+import { Home, Choice, User, Statics, Tips } from '../containers';
 
 function Routes() {
     const location = useLocation();
@@ -22,6 +22,9 @@ function Routes() {
             </Route>
             <Route exact path="/statics">
                 <Statics />
+            </Route>
+            <Route exact path="/tips">
+                <Tips />
             </Route>
         </Switch>
     );

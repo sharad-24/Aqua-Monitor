@@ -5,13 +5,20 @@ import { Bar } from 'react-chartjs-2';
 import {Chart, CategoryScale, BarController, BarElement, PointElement, LinearScale, Title} from 'chart.js'
 Chart.register(CategoryScale, BarController, BarElement, PointElement, LinearScale, Title);
 
+let forBarGraph = [];  
+forBarGraph = localStorage.getItem('forTips'); 
+console.log("Bar" , forBarGraph);
+
+let lastElement = forBarGraph[forBarGraph.length];
+console.log("Bar2", lastElement);
+
 function BarGraph() {
   const data = {
-    labels: ['Tank'],
+    labels: ['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
         label: 'Sales 2020 (M)',
-        data: [100],
+        data: forBarGraph,
         borderColor: [
           '#d4f1f9'
         ],
@@ -37,7 +44,7 @@ function BarGraph() {
           ticks: {
             min: 0,
             max: 100,
-            stepSize: 1
+            stepSize: 10
           }
         }
       ]

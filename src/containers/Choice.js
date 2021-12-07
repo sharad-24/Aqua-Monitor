@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 
 
-import { Grid, Card, CardContent, Button } from '@material-ui/core';
+import { Grid, Card, CardContent } from '@material-ui/core';
 
 import img1 from '../assets/images/01.png';
 import img2 from '../assets/images/img2.png';
@@ -16,7 +16,7 @@ const Choice = () => {
         const name = localStorage.getItem('nameData');
         setLoginName(name);
         console.log("data fetch", name);
-    });
+    },[]);
 
 
     return (
@@ -52,9 +52,9 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img2} alt="img2" />
                                         <div className="flex justify-center mt-5">
-                                            <button  className="bg-brown text-white font-bold rounded-lg p-3">
+                                            <Link to="/tips"><button className="bg-brown text-white font-bold rounded-lg p-3">
                                                 Tips
-                                            </button>
+                                            </button></Link>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -66,7 +66,7 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img3} alt="img1" />
                                         <div className="flex justify-center mt-5">
-                                            <button  className="bg-brown text-white font-bold rounded-lg p-3">
+                                            <button className="bg-brown text-white font-bold rounded-lg p-3">
                                                 Notifications
                                             </button>
                                         </div>
@@ -77,7 +77,7 @@ const Choice = () => {
                                     <CardContent>
                                         <img src={img4} alt="img1" />
                                         <div className="flex justify-center mt-5">
-                                            <Link to="/user"><button  className="bg-brown text-white font-bold rounded-lg p-3">
+                                            <Link to="/user"><button className="bg-brown text-white font-bold rounded-lg p-3">
                                                 User Detail
                                             </button></Link>
                                         </div>

@@ -20,7 +20,7 @@ const User = () => {
         setLoginPhoto(profilePhoto);
         setLoginEamil(email);
         setLoginPhoneNumber(phoneNumber);
-        // console.log("data fetch", data);
+        console.log("photo", loginPhoto );
     });
 
 

@@ -1,32 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
+import { firebase } from './firebase';
+
 import { LineGraph, BarGraph } from "../components";
-
-
 import { Grid, Card, CardContent } from '@material-ui/core';
 
 const Statics = () => {
     const [loginName, setLoginName] = useState();
-    const [count, setCount] = useState();
+    
     useEffect(() => {
-        fetch("https://api.thingspeak.com/channels/1512249/feeds.json?results=2")
-            .then(response => {
-                if (!response.ok) {
-                    throw Error("Error fetch");
-                }
-                return response.json()
-                    .then(allData => {
-                        setCount({ count: allData });
-                    })
+        firebase.database().ref("Tank Level").on("value", snapshot => {
+            let tankDataCurrent = [];
+            snapshot.forEach(snap => {
+                tankDataCurrent.push(snap.val());
             });
-
-        // console.log("api data", count);
-
+            localStorage.setItem('forTips', tankDataCurrent);
+            console.log("firebase data", tankDataCurrent);
+        });
         const name = localStorage.getItem('nameData');
         setLoginName(name);
 
-    });
+    },[]);
 
 
     return (
