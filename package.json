@@ -13,6 +13,7 @@
     "aos": "^2.3.4",
     "chart.js": "^3.6.1",
     "firebase": "8.10.0",
+    "firebase-tools": "^9.23.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-animated-css": "^1.2.1",
