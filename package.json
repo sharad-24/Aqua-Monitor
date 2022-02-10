@@ -1,5 +1,6 @@
 {
-  "name": "bytesalgo",
+  "name": "aquamonitor",
+  "homepage": "http://aquamonitor.upesacm.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
