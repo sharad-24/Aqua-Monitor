@@ -8,9 +8,10 @@ Chart.register(CategoryScale, BarController, BarElement, PointElement, LinearSca
 let forBarGraph = [];  
 forBarGraph = localStorage.getItem('forTips'); 
 console.log("Bar" , forBarGraph);
-
+if (forBarGraph && forBarGraph.length < 1){
 let lastElement = forBarGraph[forBarGraph.length];
 console.log("Bar2", lastElement);
+}
 
 function BarGraph() {
   const data = {
