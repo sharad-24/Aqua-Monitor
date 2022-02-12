@@ -17,40 +17,43 @@ const Tips = () => {
     useEffect(() => {
         const name = localStorage.getItem('nameData');
         setLoginName(name);
-
+        let Tips = [];
         const TipsData = localStorage.getItem('forTips');
-        
-        let Tips = []; 
-        Tips = TipsData[0] + TipsData[1];
-    
+
+        let lastElement = TipsData[TipsData.length - 1];
+        let lastElement2 = TipsData[TipsData.length - 2];
+        let lastElement3 = lastElement2 + lastElement;
+        Tips = lastElement3;
         console.log("Tips page", Tips)
 
-        if(Tips >= 0 && Tips < 25){
+
+
+        if (Tips >= 0 && Tips < 25) {
             setTip1("Wash Your Clothes Less Often");
             setTip2("Always turn taps off tightly so they do not drip");
             setTip3("In case of water shortage, prefer using disposable utensils, so that water is not required for cleaning the dishes.");
             setTip4("Try avoiding baths, or prefer taking short showers, as most baths use 35-50 gallons of water, but showers can use only about 25, especially if you have a low-flow shower head");
         }
-        else if(Tips >= 25 && Tips < 50){
+        else if (Tips >= 25 && Tips < 50) {
             setTip1("Avoid washing your cars");
             setTip2("Take shorter showers");
             setTip3("Reuse kitchen water for other activities such as watering plants, washing cars and so on.");
             setTip4("Use a watering can to water gardens instead of a hose.");
         }
-        else if(Tips >= 50 && Tips < 75){
+        else if (Tips >= 50 && Tips < 75) {
             setTip1("Never pour water down the drain when there may be another use for it -such as watering a plant or garden");
             setTip2("Water your lawn only when it needs it.Watering on a regular schedule doesn't allow for cool spells or rainfall which reduce the need for watering. Step on some grass. If it springs back up when you move your foot, it doesn't need water.");
             setTip3("Nearly 22% of indoor home water use comes from doing laundry. So, make it a point to adjust the water level in your washing machine to match the amount needed for the load. If this is not an option, run only full laundry loads.");
             setTip4("Use biodegradable cleaners as disinfectants while mopping the house – this water can be used to water the plants instead of being poured into drains.");
         }
-        else{
+        else {
             setTip1("Wash the car with water from a bucket, or consider using a commercial car wash that recycles water.");
             setTip2("Consider purchasing a high efficiency washing machine which can save over 50% in water and energy use.");
             setTip3("Water your garden in the morning to prevent water loss due to evaporation. Also, don’t water your garden when it’s windy outside – the wind speeds up the process of evaporation.");
             setTip4("Do not throw away the excess water after boiling vegetables or chicken. Store the stock and use it later to make curries and delicious soups.");
         }
 
-    },[]);
+    }, []);
 
 
     return (

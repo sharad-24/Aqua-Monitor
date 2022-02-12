@@ -13,6 +13,8 @@ let lastElement2 = forTankGraph[forTankGraph.length - 2];
 let lastElement3 = lastElement2 + lastElement;
 console.log("Tank2", lastElement3);
 
+localStorage.setItem('circularProgress', lastElement3);
+
 
 function TankGraph() {
   
