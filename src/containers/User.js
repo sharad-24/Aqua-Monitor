@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
 import { Grid, Card, CardContent } from '@material-ui/core';
+import { Animated } from "react-animated-css";
 
 import './index.css';
 
@@ -30,6 +31,7 @@ const User = () => {
                 <Grid item lg={2} md={2} xs={0}></Grid>
                 <Grid item lg={8} md={8} xs={12}>
                     <Card className="modalPosition">
+                    <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true} animationInDuration={1500} animationOutDuration={1500} >
                         <CardContent>
                             <div className="flex justify-between mt-5">
                                 <h className="text-3xl font-bold text-lightBlue pt-5">User Details</h>
@@ -44,6 +46,7 @@ const User = () => {
                                 <h><p className="inline font-bold">Phone Number :</p> {loginPhoneNumber}</h>
                             </div>
                         </CardContent>
+                        </Animated>
                     </Card>
                 </Grid>
                 <Grid item lg={2} md={2} xs={0}></Grid>

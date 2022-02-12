@@ -3,7 +3,8 @@ import { withRouter } from "react-router-dom";
 
 import { firebase } from './firebase';
 
-import { LineGraph, BarGraph } from "../components";
+import { LineGraph, BarGraph, TankGraph } from "../components";
+import Tips from '../containers/Tips';
 import { Grid, Card, CardContent } from '@material-ui/core';
 
 const Statics = () => {
@@ -25,6 +26,7 @@ const Statics = () => {
 
 
     return (
+        <div>
         <div className="bg-grey h-screen">
             <div className="p-10">
                 <h className="text-black font-bold text-2xl">{loginName}
@@ -45,7 +47,7 @@ const Statics = () => {
                                 </Grid>
                                 <Grid item lg={2} md={2} xs={0}></Grid>
                                 <Grid item lg={5} md={5} xs={12}>
-                                    <BarGraph />
+                                    <TankGraph />
                                 </Grid>
                             </Grid>
 
@@ -58,6 +60,10 @@ const Statics = () => {
                 </Grid>
                 <Grid item lg={1} md={1} xs={1}></Grid>
             </Grid>
+        </div>
+        <div>
+            <Tips/>
+        </div>
         </div>
     );
 }

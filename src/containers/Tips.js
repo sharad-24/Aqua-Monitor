@@ -55,10 +55,10 @@ const Tips = () => {
 
     return (
         <div className="bg-grey">
-            <div className="p-10">
+            {/* <div className="p-10">
                 <h className="text-black font-bold text-2xl">{loginName}
                     <p className="text-black font-normal inline text-1xl">,welcome back</p></h>
-            </div>
+            </div> */}
             <Grid container className="pb-10">
                 <Grid item lg={1} md={1} xs={0}></Grid>
                 <Grid item lg={4} md={4} xs={12}>
