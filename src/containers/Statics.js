@@ -31,7 +31,7 @@ const Statics = () => {
 
     return (
         <div>
-            <div className="bg-grey h-screen">
+            <div className="bg-grey h-test md:h-screen">
                 <div className="p-10">
                     <h className="text-black font-bold text-2xl">{loginName}
                         <p className="text-black font-normal inline text-1xl">,welcome back</p></h>

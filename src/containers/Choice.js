@@ -16,10 +16,13 @@ import img1 from '../assets/images/01.png';
 let forNotification = [];
 forNotification = localStorage.getItem('forTips');
 console.log("Tank", forNotification);
+let lastElement3 = [];
+if (forNotification && forNotification.length < 1){
 let lastElement = forNotification[forNotification.length - 1];
 let lastElement2 = forNotification[forNotification.length - 2];
-let lastElement3 = lastElement2 + lastElement
+ lastElement3 = lastElement2 + lastElement
 console.log("Notification", lastElement3);
+}
 
 const Choice = () => {
     const [loginName, setLoginName] = useState();
@@ -29,6 +32,10 @@ const Choice = () => {
         const name = localStorage.getItem('nameData');
         setLoginName(name);
         console.log("data fetch", name);
+        if(lastElement3 == 0){
+            lastElement3 = 100;
+        }
+        console.log("Notification2", lastElement3);
     }, []);
 
 

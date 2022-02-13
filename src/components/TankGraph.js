@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { withRouter } from "react-router-dom";
 
 import GaugeChart from 'react-gauge-chart'
@@ -8,15 +8,26 @@ let forTankGraph = [];
 forTankGraph = localStorage.getItem('forTips'); 
 console.log("Tank" , forTankGraph);
 
+let lastElement3 = [];
+if (forTankGraph && forTankGraph.length < 1){
 let lastElement = forTankGraph[forTankGraph.length - 1];
 let lastElement2 = forTankGraph[forTankGraph.length - 2];
-let lastElement3 = lastElement2 + lastElement;
+lastElement3 = lastElement2 + lastElement;
 console.log("Tank2", lastElement3);
+}
 
-localStorage.setItem('circularProgress', lastElement3);
+
 
 
 function TankGraph() {
+
+  useEffect(() => {
+    if(lastElement3 == 0){
+        lastElement3 = 100;
+    }
+    console.log("Notification2", lastElement3);
+    localStorage.setItem('circularProgress', lastElement3);
+}, []);
   
   return (
  

@@ -10,6 +10,7 @@ module.exports = {
             'screen': '100vh',
             'smallScreen': '25vh',
             'auto': 'auto',
+            'test': '70vh'
         },
         backgroundColor: theme => ({
             ...theme('colors'),

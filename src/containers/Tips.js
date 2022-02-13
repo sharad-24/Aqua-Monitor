@@ -20,11 +20,17 @@ const Tips = () => {
         let Tips = [];
         const TipsData = localStorage.getItem('forTips');
 
+        if (TipsData && TipsData.length < 1){
         let lastElement = TipsData[TipsData.length - 1];
         let lastElement2 = TipsData[TipsData.length - 2];
         let lastElement3 = lastElement2 + lastElement;
         Tips = lastElement3;
         console.log("Tips page", Tips)
+        }
+        if(Tips == 0){
+            Tips = 100;
+        }
+        console.log("Tips page-02", Tips);
 
 
 
