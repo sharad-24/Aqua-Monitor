@@ -5549,6 +5549,11 @@
     "d3-voronoi" "1"
     "d3-zoom" "1"
 
+"d3@3.5.17":
+  "integrity" "sha1-vEZ0gAQ3iyGjYMn8fPUjF5B2L7g="
+  "resolved" "https://registry.npmjs.org/d3/-/d3-3.5.17.tgz"
+  "version" "3.5.17"
+
 "damerau-levenshtein@^1.0.6":
   "integrity" "sha512-VvdQIPGdWP0SqFXghj79Wf/5LArmreyMsGLa6FG6iC4t3j7j5s71TrwWmT/4akbDQIqjfACkLZmjXhA7g2oUZw=="
   "resolved" "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.7.tgz"
@@ -9744,6 +9749,11 @@
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.3.tgz"
   "version" "2.0.3"
 
+"line-chart-react@^1.0.1":
+  "integrity" "sha512-FxgVeTTcEgSPOZDEBxshrn6q/b57+GXQFKHsjY7bMKzVso1S1AZtzTp256OY3vSBmo6kL3+PyI/ecC0JAqu6AA=="
+  "resolved" "https://registry.npmjs.org/line-chart-react/-/line-chart-react-1.0.1.tgz"
+  "version" "1.0.1"
+
 "lines-and-columns@^1.1.6":
   "integrity" "sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA="
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
@@ -12401,6 +12411,14 @@
     "object-assign" "^4.1.1"
     "react-is" "^16.8.1"
 
+"prop-types@15.5.10":
+  "integrity" "sha1-J5ffwxJhguOpXj37suiT3ddFYVQ="
+  "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.5.10.tgz"
+  "version" "15.5.10"
+  dependencies:
+    "fbjs" "^0.8.9"
+    "loose-envify" "^1.3.1"
+
 "proto3-json-serializer@^0.1.1":
   "integrity" "sha512-tGbV6m6Kad8NqxMh5hw87euPS0YoZSAOIfvR01zYkQV8Gpx1V/8yU/0gCKCvfCkhAJsjvzzhnnsdQxA1w7PSog=="
   "resolved" "https://registry.npmjs.org/proto3-json-serializer/-/proto3-json-serializer-0.1.6.tgz"
@@ -12764,6 +12782,22 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
+"react-line-graph@^1.0.6":
+  "integrity" "sha512-iQ4/vmVbN7it4DHY9HHdzlpnFT4g7ORAjF3rnFwENj1G0zTr+TMrVh3iYZNIJc3+PA1BiYfivaFohRHJHc16nA=="
+  "resolved" "https://registry.npmjs.org/react-line-graph/-/react-line-graph-1.0.6.tgz"
+  "version" "1.0.6"
+  dependencies:
+    "prop-types" "^15.7.2"
+    "react" "^16.9.0"
+
+"react-linechart@^1.1.12":
+  "integrity" "sha1-0z/3REw1ATEu2uTXSTsu9wcsihI="
+  "resolved" "https://registry.npmjs.org/react-linechart/-/react-linechart-1.1.12.tgz"
+  "version" "1.1.12"
+  dependencies:
+    "d3" "3.5.17"
+    "prop-types" "15.5.10"
+
 "react-liquid-gauge@^1.2.4":
   "integrity" "sha1-GQq2f2QiZ6VCMdAztLW3gpJFDZw="
   "resolved" "https://registry.npmjs.org/react-liquid-gauge/-/react-liquid-gauge-1.2.4.tgz"
@@ -12889,7 +12923,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.0 || >=15.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.2 || ^17.0", "react@^17.0.2", "react@>= 16", "react@>=15", "react@>=16.6.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.0 || >=15.0.0", "react@^16.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.2 || ^17.0", "react@^17.0.2", "react@>= 16", "react@>=15", "react@>=16.6.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -12907,6 +12941,15 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.0"
     "prop-types" "^15.5.10"
+
+"react@^16.9.0":
+  "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
+  "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
+  "version" "16.14.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "prop-types" "^15.6.2"
 
 "read-pkg-up@^3.0.0":
   "integrity" "sha1-PtSWaF26D4/hGNBpHcUfSh/5bwc="

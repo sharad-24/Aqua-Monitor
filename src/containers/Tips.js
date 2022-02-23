@@ -18,19 +18,17 @@ const Tips = () => {
         const name = localStorage.getItem('nameData');
         setLoginName(name);
         let Tips = [];
+        let lastElement = []; 
+let lastElement2 = []; 
         const TipsData = localStorage.getItem('forTips');
-
-        if (TipsData && TipsData.length < 1){
-        let lastElement = TipsData[TipsData.length - 1];
-        let lastElement2 = TipsData[TipsData.length - 2];
+        if (TipsData != null && TipsData.length < 1){
+        lastElement = TipsData[TipsData.length - 1];
+        lastElement2 = TipsData[TipsData.length - 2];
+        }
         let lastElement3 = lastElement2 + lastElement;
         Tips = lastElement3;
         console.log("Tips page", Tips)
-        }
-        if(Tips == 0){
-            Tips = 100;
-        }
-        console.log("Tips page-02", Tips);
+        
 
 
 

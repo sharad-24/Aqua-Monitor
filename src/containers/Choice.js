@@ -17,13 +17,18 @@ let forNotification = [];
 forNotification = localStorage.getItem('forTips');
 console.log("Tank", forNotification);
 let lastElement3 = [];
-if (forNotification && forNotification.length < 1){
-let lastElement = forNotification[forNotification.length - 1];
-let lastElement2 = forNotification[forNotification.length - 2];
+let lastElement = []; 
+let lastElement2 = []; 
+
+if (forNotification != null && forNotification.length < 1){
+ lastElement = forNotification[forNotification.length - 1];
+ lastElement2 = forNotification[forNotification.length - 2];
+}
  lastElement3 = lastElement2 + lastElement
 console.log("Notification", lastElement3);
-}
 
+let dataCopy= [0,3,10,15,19,26,38,46,55,63,74,83,91,97,100,95,90,81,73,65,57,41,32,20,17,11,6,2,0,0]
+localStorage.setItem("dataLine" , dataCopy);
 const Choice = () => {
     const [loginName, setLoginName] = useState();
     useEffect(() => {
@@ -32,10 +37,6 @@ const Choice = () => {
         const name = localStorage.getItem('nameData');
         setLoginName(name);
         console.log("data fetch", name);
-        if(lastElement3 == 0){
-            lastElement3 = 100;
-        }
-        console.log("Notification2", lastElement3);
     }, []);
 
 
@@ -100,11 +101,15 @@ const Choice = () => {
                                     <Card sx={{ maxWidth: 345 }}>
                                         <CardContent>
                                             <div className="boxHeight">
+                                                
                                                 <TankGraph />
+                                                <h className="flex justify-center mt-5 font-bold">{lastElement3}%</h>
                                             </div>
+                                            
                                             <div data-aos="flip-up" className="flex justify-center mt-5">
+                                               
                                                 <h className="bg-brown text-white font-bold rounded-lg p-3">
-                                                    {lastElement3}%
+                                                    Current Tank Level
                                                 </h>
                                             </div>
                                         </CardContent>

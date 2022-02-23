@@ -12,19 +12,39 @@ const Statics = () => {
     const [progres, setProgress] = useState();
 
     useEffect(() => {
+        let riskData = 0;
+        let tankDataCurrent = [];
         firebase.database().ref("Tank Level").on("value", snapshot => {
-            let tankDataCurrent = [];
+
             snapshot.forEach(snap => {
                 tankDataCurrent.push(snap.val());
             });
             localStorage.setItem('forTips', tankDataCurrent);
             console.log("firebase data", tankDataCurrent);
+            riskData = tankDataCurrent.length;
+            console.log("sfjhigfhhjk", riskData);
         });
         const name = localStorage.getItem('nameData');
         setLoginName(name);
 
         const progress = localStorage.getItem('circularProgress');
         setProgress(progress);
+
+        for (let i = 0; i <= riskData; i++) {
+
+            if ((tankDataCurrent[i + 1] - tankDataCurrent[i]) <= 75) {
+                console.log("true");
+                firebase.database().ref("Alert").set({
+                    "boolean": true
+                }).catch(alert);
+            }
+            // else {
+            //     console.log("false");
+            //     firebase.database().ref("Alert").set({
+            //         "boolean": false
+            //     }).catch(alert);
+            // }
+        }
 
     }, []);
 
@@ -47,7 +67,8 @@ const Statics = () => {
                                 <br /><br />
                                 <Grid container>
                                     <Grid item lg={5} md={5} xs={12}>
-                                        
+                                        <h className="flex justify-between mb-5">Forecasted Data</h>
+                                        <LineGraph />
                                     </Grid>
                                     <Grid item lg={2} md={2} xs={0}></Grid>
                                     <Grid item lg={5} md={5} xs={12}>
@@ -62,7 +83,7 @@ const Statics = () => {
                                     </Grid>
                                 </Grid>
 
-                               
+
 
 
 
